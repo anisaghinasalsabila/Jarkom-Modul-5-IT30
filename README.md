@@ -150,11 +150,33 @@ iface eth0 inet static
 
 auto eth1
 iface eth1 inet static
-         address 192.240.8.1
+         address 192.248.8.1
          netmask 255.255.252.0
 
 auto eth2
 iface eth2 inet static
-         address 192.240.0.1
+         address 192.248.0.1
          netmask 255.255.248.0
 ```
+- TurkRegion
+```
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+```
+- Sein
+```
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 192.248.8.2
+	netmask 255.255.252.0
+	gateway 192.248.8.1
+	up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+- GrabForest
+```
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+```                                                                                                               
