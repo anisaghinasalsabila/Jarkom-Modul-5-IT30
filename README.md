@@ -2,20 +2,20 @@
 - Refaldi
 - Anisa Ghina Salsabila 5027211062
 
-Pembagian Subnet
+ ## Pembagian Subnet
 
 ![Screenshot 2023-12-20 151122](https://github.com/anisaghinasalsabila/Jarkom-Modul-4-IT30-2023/assets/71119774/eb97f226-114f-4fc2-94ea-f73a791342df)
 
-VLSM 
+## VLSM 
 
 ![Screenshot 2023-12-20 151313](https://github.com/anisaghinasalsabila/Jarkom-Modul-4-IT30-2023/assets/71119774/856ebbd5-d47c-4aab-a2c9-25b8c6c1d4d9)
 
-Tree
+## Tree
 
 
 ![Untitled(11)](https://github.com/anisaghinasalsabila/Jarkom-Modul-4-IT30-2023/assets/71119774/7785b777-ba66-4e37-9a81-f8fd4922d006)
 
-Konfigurasi 
+## Konfigurasi 
 - Revolte
 ```
   # Static config for eth0
@@ -180,3 +180,29 @@ iface eth0 inet static
 auto eth0
 iface eth0 inet dhcp
 ```                                                                                                               
+## Routing
+-  Frieren                          
+```
+route add -net 192.248.14.132 netmask 255.255.255.252 gw 192.248.14.146
+route add -net 192.248.14.148 netmask 255.255.255.252 gw 192.248.14.146
+route add -net 192.248.14.0 netmask 255.255.255.128 gw 192.248.14.146
+route add -net 192.248.12.0 netmask 255.255.254.0 gw 192.248.14.146
+```
+- Aura
+```
+route add -net 192.248.14.132 netmask 255.255.255.252 gw 192.248.14.138
+route add -net 192.248.14.148 netmask 255.255.255.252 gw 192.248.14.138
+route add -net 192.248.14.0 netmask 255.255.255.128 gw 192.248.14.138
+route add -net 192.248.12.0 netmask 255.255.254.0 gw 192.248.14.138
+route add -net 192.248.14.144 netmask 255.255.255.252 gw 192.248.14.138
+route add -net 192.248.14.140 netmask 255.255.255.252 gw 192.248.14.138
+
+route add -net 192.248.0.0 netmask 255.255.248.0 gw 192.248.14.130
+route add -net 192.248.8.0 netmask 255.255.252.0 gw 192.248.14.130
+```
+- Himmel
+```
+route add -net 192.248.14.132 netmask 255.255.255.252 gw 192.248.14.2
+route add -net 192.248.14.148 netmask 255.255.255.252 gw 192.248.14.2
+```
+ 
