@@ -206,3 +206,22 @@ route add -net 192.248.14.132 netmask 255.255.255.252 gw 192.248.14.2
 route add -net 192.248.14.148 netmask 255.255.255.252 gw 192.248.14.2
 ```
  
+## Soal 1
+```
+ETH0IP="$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')"
+echo $ETH0IP
+iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to-source "$ETH0IP" -s 192.248.0.0/21
+```
+## Soal 2
+```
+iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+```
+```
+iptables -A INPUT -p tcp -j DROP
+iptables -A INPUT -p udp -j DROP
+```
+## Soal 3
+```
+iptables -I INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j DROP
+iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
