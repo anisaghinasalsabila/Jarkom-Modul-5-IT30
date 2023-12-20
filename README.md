@@ -17,7 +17,7 @@ Tree
 
 Konfigurasi 
 - Revolte
-  ```
+```
   # Static config for eth0
 auto eth0
 iface eth0 inet static
@@ -25,7 +25,7 @@ iface eth0 inet static
 	netmask 255.255.255.252
 	gateway 192.248.14.133
 	up echo nameserver 192.248.14.150 > /etc/resolv.conf
-   ```
+```
 - Richer
 ```
 # Static config for eth0
@@ -157,6 +157,4 @@ auto eth2
 iface eth2 inet static
          address 192.240.0.1
          netmask 255.255.248.0
-
-
 ```
