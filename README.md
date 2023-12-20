@@ -205,7 +205,6 @@ route add -net 192.248.8.0 netmask 255.255.252.0 gw 192.248.14.130
 route add -net 192.248.14.132 netmask 255.255.255.252 gw 192.248.14.2
 route add -net 192.248.14.148 netmask 255.255.255.252 gw 192.248.14.2
 ```
- 
 ## Soal 1
 ```
 ETH0IP="$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')"
