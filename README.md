@@ -1,6 +1,6 @@
 # Jarkom-Modul-5-IT30
-- Refaldi Agustian 5027211015
 - Anisa Ghina Salsabila 5027211062
+- Refaldi Agustian 5027211015
 
  ## Pembagian Subnet
 
